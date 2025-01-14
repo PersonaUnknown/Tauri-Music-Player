@@ -1,0 +1,1 @@
+(In-progress) A music player + artist viewer made using Tauri + React.
