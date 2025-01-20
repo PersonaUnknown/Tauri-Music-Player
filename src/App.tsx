@@ -3,7 +3,7 @@ import MusicPlayer from "./components/audio/MusicPlayer";
 import MusicSearch from "./pages/MusicSearch";
 function App() {
 	return (
-		<main className="container">
+		<main>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<MusicSearch />} />

@@ -1,10 +1,12 @@
+import MusicPlayerControls from "./MusicPlayerControls";
+import MusicPlayerProgress from "./MusicPlayerProgress";
 import MusicPlayerSongDetails from "./MusicPlayerSongDetails";
 const MusicPlayer = () => {
 	return (
-		<div className="absolute bottom-0 flex flex-row p-4 bg-black w-screen">
+		<div className="absolute bottom-0 left-0 right-0 flex flex-row m-0 p-4 bg-black w-screen">
 			<MusicPlayerSongDetails />
-			<div className="flex flex-col w-[30%] min-w-[240px]" />
-			<div className="flex flex-row w-[30%] min-w-[240px]" />
+			<MusicPlayerProgress />
+			<MusicPlayerControls />
 		</div>
 	);
 };

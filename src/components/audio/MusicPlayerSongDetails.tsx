@@ -1,29 +1,24 @@
 import { motion } from "motion/react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FaHeart } from "react-icons/fa6";
 const MusicPlayerSongDetails = () => {
 	const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
 	const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(false);
 	const [titleOffset, setTitleOffset] = useState<number>(0);
-	const titleRef = useRef<HTMLAnchorElement>(null);
 	const onTitleEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		setIsMouseOver(true);
 		const textTruncated =
 			e.currentTarget.offsetWidth < e.currentTarget.scrollWidth;
+		setTitleOffset(e.currentTarget.scrollWidth - e.currentTarget.offsetWidth);
 		if (textTruncated) {
-			setTitleOffset(e.currentTarget.scrollWidth - e.currentTarget.offsetWidth);
 			setIsAnimationPlaying(true);
 		}
 	};
 	const onTitleLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		setIsMouseOver(false);
 	};
-	const onAnimationComplete = () => {
-		setIsAnimationPlaying(false);
-		console.log("log");
-	};
 	return (
-		<div className="flex flex-row gap-4 w-[30%] min-w-[240px]">
+		<div className="flex flex-row gap-4 w-[30%] min-w-[245px]">
 			<button
 				className="flex rounded-lg overflow-hidden w-[56px] h-[56px] shrink-0"
 				type="button"
@@ -39,7 +34,6 @@ const MusicPlayerSongDetails = () => {
 					<motion.a
 						className="text-start text-white text-sm hover:underline"
 						href={"/"}
-						ref={titleRef}
 						onMouseEnter={onTitleEnter}
 						onMouseLeave={onTitleLeave}
 						initial={{ transform: "translateX(0px)" }}
@@ -69,7 +63,6 @@ const MusicPlayerSongDetails = () => {
 								setIsAnimationPlaying(false);
 							}
 						}}
-						onAnimationEnd={onAnimationComplete}
 					>
 						Knockin' On Heaven's Door
 					</motion.a>
@@ -77,7 +70,6 @@ const MusicPlayerSongDetails = () => {
 					<a
 						className="text-start text-white text-sm hover:underline"
 						href={"/"}
-						ref={titleRef}
 						onMouseEnter={onTitleEnter}
 						onMouseLeave={onTitleLeave}
 					>

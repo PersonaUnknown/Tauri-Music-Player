@@ -38,7 +38,7 @@ const ArtistSearchResult = ({ artist }: ArtistSearchResultProps) => {
 						opacity: isMouseOver ? 1 : 0,
 					}}
 				>
-					<FaPlayCircle size={55} color="#1DB954" />
+					<FaPlayCircle size={55} color="#293265" />
 				</motion.div>
 			</div>
 			<div className="text-white font-semibold">{artist.artistName}</div>
