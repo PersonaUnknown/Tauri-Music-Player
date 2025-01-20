@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MusicPlayer from "./components/audio/MusicPlayer";
 import MusicSearch from "./pages/MusicSearch";
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 					<Route path="/" element={<MusicSearch />} />
 				</Routes>
 			</BrowserRouter>
+			<MusicPlayer />
 		</main>
 	);
 }

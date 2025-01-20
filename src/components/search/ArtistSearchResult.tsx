@@ -29,6 +29,10 @@ const ArtistSearchResult = ({ artist }: ArtistSearchResultProps) => {
 				/>
 				<motion.div
 					className={"absolute right-2"}
+					initial={{
+						bottom: 10,
+						opacity: 0,
+					}}
 					animate={{
 						bottom: isMouseOver ? 25 : 10,
 						opacity: isMouseOver ? 1 : 0,
