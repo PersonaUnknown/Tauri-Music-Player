@@ -21,9 +21,9 @@ const ArtistSearchResult = ({ artist }: ArtistSearchResultProps) => {
 			onMouseLeave={onMouseLeave}
 			onClick={navigateToArtistPage}
 		>
-			<div className="w-48 h-48 mb-2 relative">
+			<div className="w-40 h-40 mb-2 relative">
 				<img
-					className="w-48 h-48 rounded-full"
+					className="w-40 h-40 rounded-full"
 					src={artist.thumbnail}
 					alt="artist"
 				/>
@@ -38,7 +38,7 @@ const ArtistSearchResult = ({ artist }: ArtistSearchResultProps) => {
 						opacity: isMouseOver ? 1 : 0,
 					}}
 				>
-					<FaPlayCircle size={55} color="#293265" />
+					<FaPlayCircle size={55} color="#c76e00" />
 				</motion.div>
 			</div>
 			<div className="text-white font-semibold">{artist.artistName}</div>

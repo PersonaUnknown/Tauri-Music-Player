@@ -57,7 +57,7 @@ const MusicPlayerProgress = () => {
 					<motion.div
 						className="h-full"
 						style={{
-							backgroundColor: isMouseOver ? "#293265" : "#ffffff",
+							backgroundColor: isMouseOver ? "#c76e00" : "#ffffff",
 						}}
 						animate={{
 							width: `${audioProgress}%`,

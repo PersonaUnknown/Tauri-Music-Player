@@ -8,7 +8,7 @@ const MusicSearch = () => {
 		e.preventDefault();
 	};
 	return (
-		<div className="bg-[#121212] flex flex-col w-screen h-screen">
+		<div className="bg-[#121212] flex flex-col w-screen h-screen rounded-xl">
 			<div className="text-white text-4xl text-center p-4">Music Search</div>
 			<div className="mx-auto">
 				<SearchBar ref={searchBarRef} onSubmit={onSearchSubmit} />
